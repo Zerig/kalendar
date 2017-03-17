@@ -1,0 +1,35 @@
+/*
+ * Set padding and margin to a class
+ */
+
+$i: 1; 
+
+@while $i < 100 {
+	// POSITIVE value
+	.pd-#{$i} {   padding: 0px + $i;  }
+	.pd-top-#{$i} {   padding-top: 0px + $i;  }
+	.pd-right-#{$i} {   padding-right: 0px + $i;  }
+	.pd-bottom-#{$i} {   padding-bottom: 0px + $i;  }
+	.pd-left-#{$i} {   padding-left: 0px + $i;  }
+
+	.mg-#{$i} {   margin: 0px + $i;  }
+	.mg-top-#{$i} {   margin-top: 0px + $i;  }
+	.mg-right-#{$i} {   margin-right: 0px + $i;  }
+	.mg-bottom-#{$i} {   margin-bottom: 0px + $i;  }
+	.mg-left-#{$i} {   margin-left: 0px + $i;  }
+
+	// NEGATIVE value
+	.pd--#{$i} {   padding: 0px - $i;  }
+	.pd-top--#{$i} {   padding-top: 0px - $i;  }
+	.pd-right--#{$i} {   padding-right: 0px - $i;  }
+	.pd-bottom--#{$i} {   padding-bottom: 0px - $i;  }
+	.pd-left--#{$i} {   padding-left: 0px - $i;  }
+
+	.mg--#{$i} {   margin: 0px - $i;  }
+	.mg-top--#{$i} {   margin-top: 0px - $i;  }
+	.mg-right--#{$i} {   margin-right: 0px - $i;  }
+	.mg-bottom--#{$i} {   margin-bottom: 0px - $i;  }
+	.mg-left--#{$i} {   margin-left: 0px - $i;  }
+
+	$i: $i + 1;
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+  </head>
+  <body>
+    <ul id="events-upcoming">
+    </ul>
+    <ul id="events-past">
+    </ul>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="format-google-calendar.js"></script>
+    <script>
+	var calendarID = "4mrr18nnff20a1kate7s7soiq4@group.calendar.google.com";
+	//var calendarID = "farnostlitomysl@gmail.com";
+
+      formatGoogleCalendar.init({
+        //calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/milan.kacurak@gmail.com/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/' + calendarID + '/events?key=AIzaSyCR3-ptjHE-_douJsn8o20oRwkxt-zHStY',
+        past: false,
+        upcoming: true,
+        sameDayTimes: true,
+        pastTopN: 20,
+        upcomingTopN: -1,
+        recurringEvents: true,
+        itemsTagName: 'li',
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '<h2>Upcoming events</h2>',
+        pastHeading: '<h2>Past events</h2>',
+        format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*']
+        //format: ["aaaa"]
+      });
+    </script>
+  </body>
+</html>
